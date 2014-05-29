@@ -1,8 +1,7 @@
-#Starting app
+#imports
 import pycurl
 import cStringIO
 import json
-from pprint import pprint
 import os
 
 #get_input asks user for zip code/city
