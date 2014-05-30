@@ -55,5 +55,9 @@ while city != "exit":
 		new_url = make_url(city)
 		forecast = get_weather(new_url)
 		forecast_json = organize_weather(forecast)
-		report = weather_report()
-		print report
+		if 'response' in forecast_json:
+			if 'error' in forecast_json["response"]:
+				print "You did not provide a valid zip address or city, please try again."
+			else:
+				report = weather_report()
+				print report
